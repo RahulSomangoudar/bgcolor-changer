@@ -2,7 +2,11 @@ html,
 body {
   height: 100%;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .container {
   position: fixed;
   top: 20px;
@@ -10,6 +14,10 @@ body {
   transform: translateX(-50%);
   background-color: white;
   border-radius: 50px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .colors {
@@ -17,26 +25,65 @@ body {
   height: 50px;
   border-radius: 50%;
   margin: 10px;
-  border: 0px;
+  border: 0;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+.colors:hover {
+  transform: scale(1.1);
+}
 
-#color-1{
-    background-color: #EB9DA2;
+#color-1 {
+  background-color: #EB9DA2;
 }
-#color-2{
-    background-color: #F0B884;
+
+#color-2 {
+  background-color: #F0B884;
 }
-#color-3{
-    background-color: #E8E6A5;
+
+#color-3 {
+  background-color: #E8E6A5;
 }
-#color-4{
-    background-color: #BBE8B5;
+
+#color-4 {
+  background-color: #BBE8B5;
 }
-#color-5{
-    background-color: #ACBBE8;
+
+#color-5 {
+  background-color: #ACBBE8;
 }
-#color-6{
-    background-color: #C5ACE8;
+
+#color-6 {
+  background-color: #C5ACE8;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .container {
+    top: 10px;
+    padding: 5px;
+  }
+
+  .colors {
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    left: 0;
+    transform: none;
+    padding: 5px;
+    border-radius: 0;
+  }
+
+  .colors {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+  }
 }
